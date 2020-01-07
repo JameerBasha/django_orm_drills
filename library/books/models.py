@@ -17,6 +17,7 @@ class Category(models.Model):
 
 
 class BookCategory(models.Model):
+    #book_id = models.ManyToManyField(Book)
     book_id = models.ForeignKey(
         Book, on_delete=models.CASCADE, related_name='book_categories')
     category_id = models.ForeignKey(
